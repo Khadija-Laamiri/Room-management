@@ -1,16 +1,9 @@
-import java.sql.*;
+package room_management;
 import Project.ConnectionProvider;
 import javax.swing.JOptionPane;
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package room_management;
+import java.sql.*;
 
-/**
- *
- * @author ~ LAAMIRI ~
- */
+
 public class DeleteUpdateStudent extends javax.swing.JFrame {
     
     public void clear(){
@@ -204,7 +197,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 236, 360, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pinkback.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pink.jpg"))); // NOI18N
         jLabel11.setText("jLabel11");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -226,7 +219,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         String roomNo=jTextField9.getText();
         try
         {
-            Connection con=ConnectionProvider.getcon();
+            Connection con=ConnectionProvider.getCon();
             Statement st=con.createStatement();
             st.executeUpdate("delete from student where mobileNo='"+mobileNo+"'");
             st.executeUpdate("update room set roomStatus='Not Booked' where number='"+roomNo+"'");
@@ -327,7 +320,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         }
         catch(Exception e)
         {
-            JOptionPane.showMessage(null,e);
+            JOptionPane.showMessageDialog(null,e);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
