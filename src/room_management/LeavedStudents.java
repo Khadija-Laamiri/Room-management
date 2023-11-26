@@ -20,7 +20,7 @@ public class LeavedStudents extends javax.swing.JFrame {
     public LeavedStudents() {
         initComponents();
         DefaultTableModel model= {DefaultTableModel}jTable1.getModel();
-        jTable1.setAutoResizeModel
+        jTable1.setAutoResizeModel 
         
     }
 
