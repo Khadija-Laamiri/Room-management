@@ -38,6 +38,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
 
         jButton5 = new javax.swing.JButton();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jButton7 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -63,9 +64,12 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
+        jButton8 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
 
         jButton5.setText("jButton5");
+
+        jButton7.setText("jButton7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -197,7 +201,15 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 236, 360, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pink.jpg"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-close-30.png"))); // NOI18N
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 50, 30));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pinkback.png"))); // NOI18N
         jLabel11.setText("jLabel11");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -324,6 +336,11 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -367,6 +384,8 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
