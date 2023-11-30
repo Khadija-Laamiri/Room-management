@@ -257,7 +257,7 @@ public class AddStudent extends javax.swing.JFrame {
             ps.executeUpdate();
             
             PreparedStatement ps1=con.prepareStatement("update room set roomStatus='Booked'where number=?");
-            ps1=setString(1,roomnumber);
+            ps1.setString(1,roomnumber);
             ps1.executeUpdate();
             JOptionPane.showMessageDialog(null,"Successfully Update");
             clear();
