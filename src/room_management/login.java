@@ -1,8 +1,10 @@
+package room_management;
+import javax.swing.JOptionPane;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package room_management;
+
 
 /**
  *
@@ -105,7 +107,7 @@ public class login extends javax.swing.JFrame {
         if(jTextField1.getText().equals("campus")&& jPasswordField1.getText().equals("admin"))
         {
             setVisible(false);
-            new home().setVisible(true);
+            new HomePage().setVisible(true);
         }
         else
             JOptionPane.showMessageDialog(null,"Incorrecte Username or Password");

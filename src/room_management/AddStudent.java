@@ -1,3 +1,4 @@
+package room_management;
 import java.sql.*;
 import Project.ConnectionProvider;
 import javax.swing.JOptionPane;
@@ -5,7 +6,7 @@ import javax.swing.JOptionPane;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package room_management;
+
 
 /**
  *
@@ -35,7 +36,7 @@ public class AddStudent extends javax.swing.JFrame {
                 jComboBox1.addItem(rs.getString(1));
             }
             if(i==0){
-                jButton2.setVisisble(false);
+                jButton2.setVisible(false);
                 JOptionPane.showMessageDialog(null,"All Rooms are already Booked");
                 setVisible(false);
             }
