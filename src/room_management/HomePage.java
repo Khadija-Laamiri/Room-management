@@ -232,6 +232,7 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton1.setForeground(Color.red);
         jButton1.setBackground(new Color(255,255,255));
+        new RoomManagement().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
