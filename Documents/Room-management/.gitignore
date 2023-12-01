@@ -1,0 +1,64 @@
+/build/
+# Ignorer les fichiers et répertoires du répertoire utilisateur
+.android/
+.bash_history
+.cache/
+.config/
+.continuum/
+.dotnet/
+.gitconfig
+.gradle/
+.idlerc/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.lesshst
+.nbi/
+.packettracer/
+.redhat/
+.vscode/
+3D\ Objects/
+AppData/
+AppMods/
+Cisco\ Packet\ Tracer\ 7.2.2/
+Cisco\ Packet\ Tracer\ 8.2.1/
+Contacts/
+Desktop/
+Downloads/
+Favorites/
+IntelGraphicsProfiles/
+Links/
+Music/
+NTUSER.DAT
+NTUSER.DAT*
+OneDrive/
+Pictures/
+Recorded\ Calls/
+Saved\ Games/
+Searches/
+Tele\ info/
+Untitled.ipynb
+Untitled1.ipynb
+Videos/
+anaconda3/
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+ntuser.ini
+source/
+# Répertoires générés par l'environnement de développement Java
+/target/
+/.idea/
+
+# Fichiers de configuration spécifiques à l'environnement
+*.iml
+*.iws
+*.ipr
+
+# Fichiers de sauvegarde ou temporaires
+*~
+*.swp
+*.bak
+
+# Fichiers de log
+*.log
+
