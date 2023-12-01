@@ -45,5 +45,20 @@ ntuser.dat.LOG1
 ntuser.dat.LOG2
 ntuser.ini
 source/
+# Répertoires générés par l'environnement de développement Java
+/target/
+/.idea/
 
+# Fichiers de configuration spécifiques à l'environnement
+*.iml
+*.iws
+*.ipr
+
+# Fichiers de sauvegarde ou temporaires
+*~
+*.swp
+*.bak
+
+# Fichiers de log
+*.log
 
