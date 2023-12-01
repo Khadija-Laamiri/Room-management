@@ -164,6 +164,7 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton6.setForeground(Color.red);
         jButton6.setBackground(new Color(255,255,255));
+        new LeavedStudents().setVisible(true); 
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

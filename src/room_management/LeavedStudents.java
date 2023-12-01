@@ -1,13 +1,15 @@
+package room_management;
+
 import java.sql.*;
 import Project.ConnectionProvider;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package room_management;
-
 /**
  *
  * @author Administrator
@@ -19,9 +21,19 @@ public class LeavedStudents extends javax.swing.JFrame {
      */
     public LeavedStudents() {
         initComponents();
-        DefaultTableModel model= {DefaultTableModel}jTable1.getModel();
-        jTable1.setAutoResizeModel 
-        
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        try {
+            Connection con = ConnectionProvider.getCon();
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("select * from student where status = 'leaved' ");
+            while (rs.next()) {
+                model.addRow(new Object[]{rs.getString(2), rs.getString(1), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9)});
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
     }
 
     /**
@@ -72,6 +84,7 @@ public class LeavedStudents extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
