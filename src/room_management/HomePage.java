@@ -1,4 +1,5 @@
 package room_management;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.*;
 /*
@@ -12,7 +13,6 @@ import javax.swing.*;
  * @author ~ LAAMIRI ~
  */
 public class HomePage extends javax.swing.JFrame {
-
     /**
      * Creates new form HomePage
      */
@@ -53,6 +53,11 @@ public class HomePage extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-hostel-32.png"))); // NOI18N
         jButton1.setText("Manage Room");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 54, 244, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -88,6 +93,11 @@ public class HomePage extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-card-payment-24.png"))); // NOI18N
         jButton5.setText("All Students Living");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 320, 244, 39));
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -132,20 +142,34 @@ public class HomePage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
 
        
+=======
+        new AddStudent().setVisible(true);
+        jButton2.setForeground(Color.red);
+        jButton2.setBackground(new Color(255,255,255));
+>>>>>>> 97c8415c2869b772523ac45ccf57ebe4df4fbf05
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        jButton3.setForeground(Color.red);
+        jButton3.setBackground(new Color(255,255,255));
+        new DeleteUpdateStudent().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        jButton4.setForeground(Color.red);
+        jButton4.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        jButton6.setForeground(Color.red);
+        jButton6.setBackground(new Color(255,255,255));
+        new LeavedStudents().setVisible(true); 
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -176,7 +200,10 @@ public class HomePage extends javax.swing.JFrame {
             Runtime runtime=Runtime.getRuntime();
             try
             {
-                Process proc=runtime.exec("shutdown -s -t 0");
+                //Process proc=runtime.exec("shutdown -s -t 0");
+                ProcessBuilder processBuilder = new ProcessBuilder("shutdown", "-s", "-t", "0");
+                Process process = processBuilder.start();
+                process.waitFor();
             }
             catch(Exception e)
             {
@@ -186,7 +213,7 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
-        // TODO add your handling code here:
+         // TODO add your handling code here:
         jButton1.setForeground(new JButton().getForeground());
         jButton1.setBackground(new JButton().getBackground());
         
@@ -206,6 +233,19 @@ public class HomePage extends javax.swing.JFrame {
         jButton6.setBackground(new JButton().getBackground());
         
     }//GEN-LAST:event_formWindowGainedFocus
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        jButton1.setForeground(Color.red);
+        jButton1.setBackground(new Color(255,255,255));
+        new RoomManagement().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        jButton5.setForeground(Color.red);
+        jButton5.setBackground(new Color(255,255,255));
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
