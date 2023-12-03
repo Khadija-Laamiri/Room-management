@@ -38,6 +38,7 @@ public class HomePage extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -50,6 +51,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(218, 255, 251));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-hostel-32.png"))); // NOI18N
         jButton1.setText("Manage Room");
@@ -60,6 +62,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 54, 244, -1));
 
+        jButton2.setBackground(new java.awt.Color(218, 255, 251));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-new-copy-30.png"))); // NOI18N
         jButton2.setText("New Student");
@@ -70,6 +73,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 122, 244, -1));
 
+        jButton3.setBackground(new java.awt.Color(218, 255, 251));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-agreement-delete-30.png"))); // NOI18N
         jButton3.setText("Update & Delete Students");
@@ -80,6 +84,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 188, -1, -1));
 
+        jButton4.setBackground(new java.awt.Color(218, 255, 251));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-no-hidden-fees-24.png"))); // NOI18N
         jButton4.setText("Student Fees");
@@ -90,6 +95,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 252, 244, 40));
 
+        jButton5.setBackground(new java.awt.Color(218, 255, 251));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-card-payment-24.png"))); // NOI18N
         jButton5.setText("All Students Living");
@@ -100,6 +106,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 320, 244, 39));
 
+        jButton6.setBackground(new java.awt.Color(218, 255, 251));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-raise-a-hand-to-answer-24.png"))); // NOI18N
         jButton6.setText("Leaved Students");
@@ -136,6 +143,10 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 50, 40, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue3.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -285,5 +296,6 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
