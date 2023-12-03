@@ -15,6 +15,11 @@ public class Room_management {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+       javax.swing.SwingUtilities.invokeLater(new Runnable() {
+    public void run() {
+        new login().setVisible(true);
+    }
+    });
     }
     
 }
