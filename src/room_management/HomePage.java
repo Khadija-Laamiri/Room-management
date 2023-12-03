@@ -153,9 +153,14 @@ public class HomePage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
+
+       
+=======
         new AddStudent().setVisible(true);
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
+>>>>>>> 97c8415c2869b772523ac45ccf57ebe4df4fbf05
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -175,6 +180,7 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton6.setForeground(Color.red);
         jButton6.setBackground(new Color(255,255,255));
+        new LeavedStudents().setVisible(true); 
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -243,6 +249,7 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton1.setForeground(Color.red);
         jButton1.setBackground(new Color(255,255,255));
+        new RoomManagement().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
