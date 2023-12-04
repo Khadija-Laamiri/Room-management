@@ -130,16 +130,14 @@ public class HomePage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
+
 
         new AddStudent().setVisible(true);
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
-=======
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
         new AddStudent().setVisible(true);
->>>>>>> ffdaed2720ecb7f56ae76bf1463d1951b56d4368
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
