@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 import java.sql.*;
 
 
+
 public class DeleteUpdateStudent extends javax.swing.JFrame {
     
     public void clear(){
@@ -19,6 +20,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jTextField9.setText("");
         jComboBox1.removeAllItems();
     }
+    
 
     /**
      * Creates new form DeleteUpdateStudent
@@ -203,6 +205,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
