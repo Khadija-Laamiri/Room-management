@@ -37,7 +37,7 @@ public class HomePage extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -50,6 +50,7 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(218, 255, 251));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-hostel-32.png"))); // NOI18N
         jButton1.setText("Manage Room");
@@ -58,8 +59,9 @@ public class HomePage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 54, 244, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 244, -1));
 
+        jButton2.setBackground(new java.awt.Color(218, 255, 251));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-new-copy-30.png"))); // NOI18N
         jButton2.setText("New Student");
@@ -68,8 +70,9 @@ public class HomePage extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 122, 244, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 244, -1));
 
+        jButton3.setBackground(new java.awt.Color(218, 255, 251));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-agreement-delete-30.png"))); // NOI18N
         jButton3.setText("Update & Delete Students");
@@ -78,8 +81,9 @@ public class HomePage extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 188, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
 
+        jButton4.setBackground(new java.awt.Color(218, 255, 251));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-no-hidden-fees-24.png"))); // NOI18N
         jButton4.setText("Student Fees");
@@ -88,8 +92,9 @@ public class HomePage extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 252, 244, 40));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 244, 40));
 
+        jButton5.setBackground(new java.awt.Color(218, 255, 251));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-card-payment-24.png"))); // NOI18N
         jButton5.setText("All Students Living");
@@ -98,8 +103,9 @@ public class HomePage extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 320, 244, 39));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 244, 39));
 
+        jButton6.setBackground(new java.awt.Color(218, 255, 251));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-raise-a-hand-to-answer-24.png"))); // NOI18N
         jButton6.setText("Leaved Students");
@@ -108,7 +114,7 @@ public class HomePage extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 392, 244, 39));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 244, 39));
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-logout-24.png"))); // NOI18N
@@ -117,7 +123,7 @@ public class HomePage extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 100, 40, 40));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, 40, 40));
 
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-close-30.png"))); // NOI18N
@@ -126,26 +132,27 @@ public class HomePage extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, 40, 30));
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 10, 40, 40));
 
-        jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-hibernate-24.png"))); // NOI18N
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 50, 40, 40));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue3.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
 
         new AddStudent().setVisible(true);
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
+=======
+        jButton2.setForeground(Color.red);
+        jButton2.setBackground(new Color(255,255,255));
+        new AddStudent().setVisible(true);
+>>>>>>> ffdaed2720ecb7f56ae76bf1463d1951b56d4368
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -187,26 +194,6 @@ public class HomePage extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-        int a=JOptionPane.showConfirmDialog(null,"Do yoy really want to Logout","Select",JOptionPane.YES_NO_OPTION);
-        if(a==0)
-        {
-            Runtime runtime=Runtime.getRuntime();
-            try
-            {
-                //Process proc=runtime.exec("shutdown -s -t 0");
-                ProcessBuilder processBuilder = new ProcessBuilder("shutdown", "-s", "-t", "0");
-                Process process = processBuilder.start();
-                process.waitFor();
-            }
-            catch(Exception e)
-            {
-                JOptionPane.showMessageDialog(null,e);
-            }
-        }
-    }//GEN-LAST:event_jButton9ActionPerformed
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
          // TODO add your handling code here:
@@ -287,6 +274,6 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
