@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
  */
 /**
  *
- * @author Administrator
+ * @author huda-do-5
  */
 public class LeavedStudents extends javax.swing.JFrame {
 
@@ -75,7 +75,7 @@ public class LeavedStudents extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 57, 620, 430));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wepik-export-20231130202958vpok.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 760, 1140));
 

@@ -4,10 +4,10 @@ import javax.swing.JOptionPane;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-=======
->>>>>>> 0dba7e14f407d6d9a2bc60113a219f9a5c0efb44
+//=======
+//>>>>>>> 0dba7e14f407d6d9a2bc60113a219f9a5c0efb44
 
 /**
  *
