@@ -24,7 +24,7 @@ public class LeavedStudents extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         try {
-            Connection con = ConnectionProvider.getCon();
+            Connection con = ConnectionProvider.connect();
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("select * from student where status = 'leaved' ");
             while (rs.next()) {
