@@ -9,16 +9,23 @@ import java.sql.*;
  * @author ~ LAAMIRI ~
  */
 public class ConnectionProvider {
-    public static Connection getCon(){
-        try
+    public static Connection connect(){
+           
+            java.sql.Connection con = null;
+        
+            try
         {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/campus_university","root","");
-            return con;
+            Class.forName("com.mysql.jdbc.Driver");
+            con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/campus_university","root","");
+            
         }
         catch(Exception e)
-        {  e.printStackTrace();
-            return null;
+        { 
+            System.out.println(e);
+           
         }
+        return con;    
+    
     }
+    
 }
