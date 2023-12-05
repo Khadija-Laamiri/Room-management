@@ -3,18 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/C:/Users/Administrator/Documents/JAVA_PROJECT/Room/Room-management/src/room_management/login.java</file>
+            <file>file:/C:/Users/Administrator/Documents/JAVA_PROJECT/Room/Room-management/src/Project/ConnectionProvider.java</file>
             <file>file:/C:/Users/Administrator/Documents/JAVA_PROJECT/Room/Room-management/src/room_management/HomePage.java</file>
+            <file>file:/C:/Users/Administrator/Documents/JAVA_PROJECT/Room/Room-management/src/room_management/RoomManagement.java</file>
             <file>file:/C:/Users/Administrator/Documents/JAVA_PROJECT/Room/Room-management/src/room_management/LeavedStudents.java</file>
-=======
-            <file>file:/C:/Users/Enami/Desktop/Java%20Project/Room-management/src/room_management/Room_management.java</file>
-            <file>file:/C:/Users/Enami/Desktop/Java%20Project/Room-management/src/room_management/login.java</file>
-            <file>file:/C:/Users/Enami/Desktop/Java%20Project/Room-management/src/room_management/HomePage.java</file>
-            <file>file:/C:/Users/Enami/Desktop/Java%20Project/Room-management/src/room_management/DeleteUpdateStudent.java</file>
-            <file>file:/C:/Users/Enami/Desktop/Java%20Project/Room-management/src/room_management/AddStudent.java</file>
-            <file>file:/C:/Users/Enami/Desktop/Java%20Project/Room-management/src/room_management/RoomManagement.java</file>
->>>>>>> 57a34e43ae85c1b1a6dc322a54a4441c27d9ae8d
         </group>
     </open-files>
 </project-private>
