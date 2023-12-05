@@ -135,7 +135,10 @@ public class HomePage extends javax.swing.JFrame {
         new AddStudent().setVisible(true);
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 57a34e43ae85c1b1a6dc322a54a4441c27d9ae8d
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
         new AddStudent().setVisible(true);
