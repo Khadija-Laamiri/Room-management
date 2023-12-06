@@ -10,7 +10,7 @@ import java.sql.*;
  * @author ss
  */
 public class DBconnection {
-     public static Connection connect(){
+     public static Connection getCon(){
            
             java.sql.Connection con = null;
         

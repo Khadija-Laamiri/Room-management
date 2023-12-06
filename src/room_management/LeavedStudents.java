@@ -1,7 +1,7 @@
 package room_management;
 
 import java.sql.*;
-import Project.ConnectionProvider;
+import Project.DBconnection;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -26,7 +26,7 @@ public class LeavedStudents extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         try {
-            Connection con = ConnectionProvider.connect();
+            Connection con = DBconnection.getCon();
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("select * from student where status = 'leaved' ");
             while (rs.next()) {

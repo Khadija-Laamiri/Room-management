@@ -135,10 +135,7 @@ public class HomePage extends javax.swing.JFrame {
         new AddStudent().setVisible(true);
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
-<<<<<<< HEAD
 
-=======
->>>>>>> 57a34e43ae85c1b1a6dc322a54a4441c27d9ae8d
         jButton2.setForeground(Color.red);
         jButton2.setBackground(new Color(255,255,255));
         new AddStudent().setVisible(true);
@@ -155,6 +152,7 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton4.setForeground(Color.red);
         jButton4.setBackground(new Color(255,255,255));
+        new StudentFees().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -217,6 +215,7 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton5.setForeground(Color.red);
         jButton5.setBackground(new Color(255,255,255));
+        new AllStudentsLiving().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
