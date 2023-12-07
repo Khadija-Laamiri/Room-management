@@ -100,6 +100,7 @@ public class Home extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText(" Manage Room");
         jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.setRolloverEnabled(false);
         jButton1.setVerifyInputWhenFocusTarget(false);
@@ -177,6 +178,7 @@ public class Home extends javax.swing.JFrame {
         jButton2.setText("New Student");
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.setFocusable(false);
         jButton2.setRolloverEnabled(false);
@@ -264,6 +266,7 @@ public class Home extends javax.swing.JFrame {
         jButton3.setText("     Delete & Update Students ");
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.setFocusPainted(false);
         jButton3.setFocusable(false);
         jButton3.setRolloverEnabled(false);
@@ -318,6 +321,7 @@ public class Home extends javax.swing.JFrame {
         jButton4.setText("Students Fees");
         jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.setFocusPainted(false);
         jButton4.setFocusable(false);
         jButton4.setRolloverEnabled(false);
@@ -362,6 +366,7 @@ public class Home extends javax.swing.JFrame {
         jButton5.setText("All Students Living ");
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.setFocusPainted(false);
         jButton5.setFocusable(false);
         jButton5.setRolloverEnabled(false);
@@ -407,6 +412,7 @@ public class Home extends javax.swing.JFrame {
         jButton6.setText("Leaved Students");
         jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.setFocusPainted(false);
         jButton6.setFocusable(false);
         jButton6.setRolloverEnabled(false);
@@ -492,6 +498,7 @@ public class Home extends javax.swing.JFrame {
 
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-close-30.png"))); // NOI18N
         jButton7.setBorder(null);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -501,6 +508,7 @@ public class Home extends javax.swing.JFrame {
 
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lgout new.png"))); // NOI18N
         jButton8.setBorder(null);
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -537,8 +545,8 @@ public class Home extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         jButton4.setForeground(new Color(153, 0, 153));
-         jButton4.setBackground(new Color(255,255,255));
-         //new StudentFees().setVisible(true);
+        jButton4.setBackground(new Color(255,255,255));
+        new StudentFees().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -551,8 +559,8 @@ public class Home extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         jButton6.setForeground(new Color(153, 0, 153));
-         jButton6.setBackground(new Color(255,255,255));
-         new LeavedStudents().setVisible(true);
+        jButton6.setBackground(new Color(255,255,255));
+        new LeavedStudents().setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
