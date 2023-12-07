@@ -1,6 +1,6 @@
 package room_management;
 import java.sql.*;
-import Project.ConnectionProvider;
+import Project.DBconnection;
 import javax.swing.JOptionPane;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -28,7 +28,7 @@ public class AddStudent extends javax.swing.JFrame {
     public void roomNumber(){
         int i=0;
         try{
-            Connection con=ConnectionProvider.getCon();
+            Connection con=DBconnection.getCon();
             Statement st=con.createStatement();
             ResultSet rs=st.executeQuery("select *from room where activate='Yes'and roomStatu='Not Booked' ");
             while(rs.next()){
@@ -50,7 +50,9 @@ public class AddStudent extends javax.swing.JFrame {
      */
     public AddStudent() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -237,7 +239,7 @@ public class AddStudent extends javax.swing.JFrame {
         String roomnumber=(String)jComboBox1.getSelectedItem();
         String status="living";
         try{
-            Connection con=ConnectionProvider.getCon();
+            Connection con=DBconnection.getCon();
             PreparedStatement ps=con.prepareStatement("insert into student values(?,?,?,?,?,?,?,?,?,?");
             ps.setString(1, mobilenumber);
             ps.setString(2, name);

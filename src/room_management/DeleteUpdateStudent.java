@@ -1,5 +1,5 @@
 package room_management;
-import Project.ConnectionProvider;
+import Project.DBconnection;
 import javax.swing.JOptionPane;
 import java.sql.*;
 
@@ -228,7 +228,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         String roomNo=jTextField9.getText();
         try
         {
-            Connection con=ConnectionProvider.getCon();
+            Connection con=DBconnection.getCon();
             Statement st=con.createStatement();
             st.executeUpdate("delete from student where mobileNo='"+mobileNo+"'");
             st.executeUpdate("update room set roomStatus='Not Booked' where number='"+roomNo+"'");
@@ -254,7 +254,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         // TODO add your handling code here:
         String mobileNo=jTextField1.getText();
         try{
-            Connection con=ConnectionProvider.getCon();
+            Connection con=DBconnection.getCon();
             Statement st=con.createStatement();
             ResultSet rs=st.executeQuery("select * from student where mobileNo='"+mobileNo+"'");
             if(rs.first()){
@@ -305,7 +305,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         String status=(String)jComboBox1.getSelectedItem();
         try
         {
-            Connection con=ConnectionProvider.getCon();
+            Connection con=DBconnection.getCon();
             Statement st=con.createStatement();
             if(status.equals("living"))
             {

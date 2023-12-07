@@ -1,10 +1,12 @@
 package room_management;
 
 import java.sql.*;
-import Project.ConnectionProvider;
+import Project.DBconnection;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -12,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  */
 /**
  *
- * @author Administrator
+ * @author huda-do-5
  */
 public class LeavedStudents extends javax.swing.JFrame {
 
@@ -24,7 +26,7 @@ public class LeavedStudents extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         try {
-            Connection con = ConnectionProvider.getCon();
+            Connection con = DBconnection.getCon();
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("select * from student where status = 'leaved' ");
             while (rs.next()) {
@@ -75,7 +77,7 @@ public class LeavedStudents extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 57, 620, 430));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue3.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 760, 1140));
 

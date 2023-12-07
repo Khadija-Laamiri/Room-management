@@ -4,7 +4,7 @@
  */
 package room_management;
 
-import Project.ConnectionProvider;
+import Project.DBconnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,11 +29,11 @@ public class RoomManagement extends javax.swing.JFrame {
       jTextField2.setEditable(true);
     
     }
-    public void tableDetails(){
+     public void tableDetails(){
       DefaultTableModel  dtm= (DefaultTableModel) jTable1.getModel();
       dtm.setRowCount(0);
       try{
-          Connection con=ConnectionProvider.getCon();
+          Connection con=DBconnection.getCon();
           Statement st = con.createStatement();
           ResultSet rs = st.executeQuery("select * from room");
           while(rs.next()){
@@ -50,7 +50,6 @@ public class RoomManagement extends javax.swing.JFrame {
       
       
     }
-
     /**
      * Creates new form RoomManagement
      */
@@ -228,7 +227,11 @@ public class RoomManagement extends javax.swing.JFrame {
         }
         try{
             
-            Connection con=ConnectionProvider.getCon();
+
+            
+
+            Connection con=DBconnection.getCon();
+
             PreparedStatement ps=con.prepareStatement("insert into room values(?,?,?)");
             ps.setString(1,RoomNumber);
             ps.setString(2,activate);
@@ -249,7 +252,9 @@ public class RoomManagement extends javax.swing.JFrame {
         String roomnumber=jTextField2.getText();
         int i=0;
         try{
-            Connection con = ConnectionProvider.getCon();
+
+            Connection con = DBconnection.getCon();
+
             Statement st=con.createStatement();
             ResultSet rs=st.executeQuery("select * from room where number='" + roomnumber + "'");
             while(rs.next()){
@@ -287,7 +292,8 @@ public class RoomManagement extends javax.swing.JFrame {
         else
             activate="No";
         try{
-            Connection con = ConnectionProvider.getCon();
+
+            Connection con = DBconnection.getCon();
             Statement st=con.createStatement();
             st.executeUpdate("update room set  active=' "+activate+" ' where number=' " +roomnumber+ " '  ");   
              JOptionPane.showMessageDialog(null,"Successfully updated");
@@ -307,7 +313,9 @@ public class RoomManagement extends javax.swing.JFrame {
          String roomnumber=jTextField2.getText();
        
         try{
-            Connection con = ConnectionProvider.getCon();
+
+            Connection con = DBconnection.getCon();
+
             Statement st=con.createStatement();
             st.executeUpdate("delete from room   where number=' " +roomnumber+ " '  ");   
              JOptionPane.showMessageDialog(null,"Successfully deleted");
