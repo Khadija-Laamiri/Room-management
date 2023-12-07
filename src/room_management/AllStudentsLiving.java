@@ -1,11 +1,19 @@
-import java.sql.*;
-import Project.ConnectionProvider;
+package room_management;
+
+import Project.DBconnection;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package room_management;
+
 
 /**
  *
@@ -18,15 +26,16 @@ public class AllStudentsLiving extends javax.swing.JFrame {
      */
     public AllStudentsLiving() {
         initComponents();
-        DefaultTableModel model=(DefaultTableModel) jTable1.getModel();
-        jTable1.setAutoResizeMode(jTable1.Auto_RESIZE_OFF);
+       DefaultTableModel model=(DefaultTableModel) jTable1.getModel();
+        jTable1.setAutoResizeMode(jTable1.AUTO_RESIZE_OFF);
         try{
         
-            Connection con =ConnectionProvider.getCon();
+            Connection con =DBconnection.getCon();
             Statement st=con.createStatement();
             ResultSet rs=st.executeQuery("select *from student where status='living'");
             while(rs.next()){
-               model.addRow(new Object[]{rs.getString(2),rs.getString(1),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9 )})
+               model.addRow(new Object[]{rs.getString(2),rs.getString(1),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9 )});
+               
             }
         }
         catch(Exception e){
