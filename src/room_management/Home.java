@@ -19,6 +19,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+        
     }
 
     /**
@@ -586,7 +587,7 @@ public class Home extends javax.swing.JFrame {
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         // TODO add your handling code here:
-         jButton1.setForeground(new JButton().getForeground());
+        jButton1.setForeground(new JButton().getForeground());
         jButton1.setBackground(new JButton().getBackground());
         
         jButton2.setForeground(new JButton().getForeground());
