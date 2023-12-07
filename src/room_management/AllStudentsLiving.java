@@ -1,4 +1,8 @@
 package room_management;
+<<<<<<< HEAD
+import java.sql.*;
+import Project.ConnectionProvider;
+=======
 
 import Project.DBconnection;
 import java.sql.Connection;
@@ -8,6 +12,7 @@ import java.sql.Statement;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+>>>>>>> 72866c942e11b0577635210a2fd70e73b2c22a23
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
