@@ -51,7 +51,6 @@ public class AddStudent extends javax.swing.JFrame {
      */
     public AddStudent() {
         initComponents();
-        this.setLocationRelativeTo(null);
     }
     
 

@@ -28,7 +28,6 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
      */
     public DeleteUpdateStudent() {
         initComponents();
-        this.setLocationRelativeTo(null);
     }
 
     /**
