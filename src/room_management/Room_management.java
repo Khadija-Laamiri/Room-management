@@ -14,6 +14,7 @@ public class Room_management {
        javax.swing.SwingUtilities.invokeLater(new Runnable() {
     public void run() {
         new Home().setVisible(true);
+        new LoginPage().setVisible(true);
     }
     });
     }
