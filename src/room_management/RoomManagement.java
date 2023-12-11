@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 public class RoomManagement extends javax.swing.JFrame {
     public void  clear(){
         
-       jTextField1.setText("");
+      jTextField1.setText("");
       jTextField2.setText("");
       jCheckBox1.setSelected(false);
       jCheckBox2.setSelected(false);
@@ -159,7 +159,7 @@ public class RoomManagement extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 153, 153));
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-save-25.png"))); // NOI18N
         jButton2.setText("Save");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setPreferredSize(new java.awt.Dimension(97, 31));
