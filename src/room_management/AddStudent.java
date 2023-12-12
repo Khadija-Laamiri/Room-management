@@ -31,7 +31,7 @@ public class AddStudent extends javax.swing.JFrame {
         try{
             Connection con=DBconnection.getCon();
             Statement st=con.createStatement();
-            ResultSet rs=st.executeQuery("select *from room where activate='Yes'and roomStatu='Not Booked' ");
+            ResultSet rs=st.executeQuery("select *from room where activate='Yes'and roomStatus='Not Booked' ");
             while(rs.next()){
                 i=1;
                 jComboBox1.addItem(rs.getString(1));
@@ -299,7 +299,7 @@ public class AddStudent extends javax.swing.JFrame {
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         // TODO add your handling code here:
-        
+        jButton1.setBackground(new Color(255,255,255));
         jButton2.setBackground(new Color(153,0,153));
         jButton3.setBackground(new Color(153,0,153));
         jComboBox1.setBackground(new Color(255,255,255));
@@ -323,7 +323,7 @@ public class AddStudent extends javax.swing.JFrame {
         String status="living";
         try{
             Connection con=DBconnection.getCon();
-            PreparedStatement ps=con.prepareStatement("insert into student values(?,?,?,?,?,?,?,?,?,?");
+            PreparedStatement ps=con.prepareStatement("insert into student values(?,?,?,?,?,?,?,?,?,?)");
             ps.setString(1, mobilenumber);
             ps.setString(2, name);
             ps.setString(3, fathername);

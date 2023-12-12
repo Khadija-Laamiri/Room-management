@@ -151,6 +151,11 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jLabel10.setText("Living Status");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 401, -1, -1));
 
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 399, 361, 30));
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
@@ -241,7 +246,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         {
             Connection con=DBconnection.getCon();
             Statement st=con.createStatement();
-            st.executeUpdate("delete from student where mobileNo='"+mobileNo+"'");
+            st.executeUpdate("delete from student where mobile='"+mobileNo+"'");
             st.executeUpdate("update room set roomStatus='Not Booked' where number='"+roomNo+"'");
             JOptionPane.showMessageDialog(null,"Successfully Deleted");
             clear();
@@ -266,8 +271,8 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         String mobileNo=jTextField1.getText();
         try{
             Connection con=DBconnection.getCon();
-            Statement st=con.createStatement();
-            ResultSet rs=st.executeQuery("select * from student where mobileNo='"+mobileNo+"'");
+            Statement st=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs=st.executeQuery("select * from student where mobile='"+mobileNo+"'");
             if(rs.first()){
                 jTextField1.setEditable(false);
                 jTextField2.setText(rs.getString(2));
@@ -324,7 +329,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
             }
             else
                 st.executeUpdate("update room set roomStatus='Not Booked' where number='"+roomNo+"'");
-            PreparedStatement ps=con.prepareStatement("update student set name=?,father=?,mother=?,email=?,address=?,college=?,codemassar=?,status=? where mobileNo=?");
+            PreparedStatement ps=con.prepareStatement("update student set name=?,father_name=?,mother_name=?,email=?,address=?,college_name=?,massar_code=?,status=? where mobile=?");
             ps.setString(1, name);
             ps.setString(2, fathername);
             ps.setString(3, mothername);
@@ -351,12 +356,17 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jButton4.setBackground(new Color(153,0,153));
         jButton6.setBackground(new Color(153,0,153));
         jComboBox1.setBackground(new Color(255,255,255));
+        jButton2.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_formWindowGainedFocus
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments

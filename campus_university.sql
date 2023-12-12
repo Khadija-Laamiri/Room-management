@@ -70,6 +70,7 @@ CREATE TABLE `student` (
   `college_name` varchar(50) NOT NULL,
   `massar_code` varchar(50) NOT NULL,
   `room_number` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
