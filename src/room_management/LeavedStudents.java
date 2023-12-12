@@ -4,9 +4,8 @@ import java.sql.*;
 import Project.DBconnection;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
-import org.netbeans.lib.awtextra.AbsoluteConstraints;
-import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -23,6 +22,7 @@ public class LeavedStudents extends javax.swing.JFrame {
      */
     public LeavedStudents() {
         initComponents();
+<<<<<<< HEAD
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         try {
@@ -31,11 +31,26 @@ public class LeavedStudents extends javax.swing.JFrame {
             ResultSet rs = st.executeQuery("select * from student where status='leaved'");
             while (rs.next()) {
                 model.addRow(new Object[]{rs.getString(2), rs.getString(1), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9)});
+=======
+        
+        SwingUtilities.invokeLater(()-> {
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+            
+            try {
+                Connection con = DBconnection.getCon();
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("select * from student where status = 'leaved' ");
+                
+                while (rs.next()) {
+                    model.addRow(new Object[]{rs.getString(2), rs.getString(1), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9)});
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, e);
+>>>>>>> e4323d3266e62467ba9bb10a703567939ba107e4
             }
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-
+        });
     }
 
     /**
