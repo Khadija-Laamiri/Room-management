@@ -28,7 +28,7 @@ public class LeavedStudents extends javax.swing.JFrame {
         try {
             Connection con = DBconnection.getCon();
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select * from student where status = 'leaved' ");
+            ResultSet rs = st.executeQuery("select * from student where status='leaved'");
             while (rs.next()) {
                 model.addRow(new Object[]{rs.getString(2), rs.getString(1), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9)});
             }
@@ -56,6 +56,7 @@ public class LeavedStudents extends javax.swing.JFrame {
         setLocation(new java.awt.Point(480, 150));
         setUndecorated(true);
 
+        jTable1.setBackground(new java.awt.Color(153, 204, 255));
         jTable1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
