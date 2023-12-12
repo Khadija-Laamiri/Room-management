@@ -344,20 +344,19 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         // TODO add your handling code here:
         jButton1.setBackground(new Color(153,0,153));
-        jButton2.setBackground(new Color(255,255,255));
         jButton3.setBackground(new Color(153,0,153));
         jButton4.setBackground(new Color(153,0,153));
         jButton6.setBackground(new Color(153,0,153));
         jComboBox1.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_formWindowGainedFocus
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
