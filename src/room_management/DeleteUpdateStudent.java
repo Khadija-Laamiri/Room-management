@@ -65,16 +65,15 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
         jButton5.setText("jButton5");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(148, 253, 227));
         setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         setLocation(new java.awt.Point(480, 150));
-        setUndecorated(true);
+        setMinimumSize(new java.awt.Dimension(20, 20));
         addWindowFocusListener(new java.awt.event.WindowFocusListener() {
             public void windowGainedFocus(java.awt.event.WindowEvent evt) {
                 formWindowGainedFocus(evt);
@@ -88,7 +87,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jLabel1.setText("Mobile Number");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 37, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jTextField1.setAutoscrolls(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,22 +96,22 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 180, 30));
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 71, 361, 30));
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 112, 361, 30));
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextField4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 361, 30));
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextField7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 361, 30));
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextField8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 361, 30));
 
-        jTextField9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextField9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 361, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -140,7 +139,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 238, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel8.setText("Massar Code(UNIQUE Id)");
+        jLabel8.setText("Massar Code");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 279, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -151,6 +150,7 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jLabel10.setText("Living Status");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 401, -1, -1));
 
+        jComboBox1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -208,8 +208,11 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, -1, -1));
+
+        jTextField5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 360, 30));
 
+        jTextField6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -217,18 +220,8 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 236, 360, 30));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-close-30.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, 30, 30));
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 540));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -328,8 +321,8 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
                 st.executeUpdate("update room set roomStatus='Booked' where number='"+roomNo+"'");
             }
             else
-                st.executeUpdate("update room set roomStatus='Not Booked' where number='"+roomNo+"'");
-            PreparedStatement ps=con.prepareStatement("update student set name=?,father_name=?,mother_name=?,email=?,address=?,college_name=?,massar_code=?,status=? where mobile=?");
+               st.executeUpdate("update room set roomStatus='Not Booked' where number='"+roomNo+"'");
+            java.sql.PreparedStatement ps=con.prepareStatement("update student set name=?,father_name=?,mother_name=?,email=?,address=?,college_name=?,massar_code=?,status=? where mobile=?");
             ps.setString(1, name);
             ps.setString(2, fathername);
             ps.setString(3, mothername);
@@ -356,16 +349,11 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
         jButton4.setBackground(new Color(153,0,153));
         jButton6.setBackground(new Color(153,0,153));
         jComboBox1.setBackground(new Color(255,255,255));
-        jButton2.setBackground(new Color(255,255,255));
     }//GEN-LAST:event_formWindowGainedFocus
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
@@ -406,7 +394,6 @@ public class DeleteUpdateStudent extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
