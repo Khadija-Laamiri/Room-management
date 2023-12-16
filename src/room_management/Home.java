@@ -773,7 +773,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton6.setForeground(new Color(153, 0, 153));
         jButton6.setBackground(new Color(255,255,255));
-        new LeavedStudents().setVisible(true);
+        new LeavedStu().setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
