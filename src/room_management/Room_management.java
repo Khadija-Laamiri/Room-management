@@ -1,5 +1,6 @@
 package room_management;
 
+
 /**
  *
  * @author ~ LAAMIRI ~
@@ -11,11 +12,11 @@ public class Room_management {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-       javax.swing.SwingUtilities.invokeLater(new Runnable() {
-    public void run() {
-        new LoginPage().setVisible(true);
-    }
-    });
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new LoginPage().setVisible(true);
+            }
+        });
     }
     
 }
