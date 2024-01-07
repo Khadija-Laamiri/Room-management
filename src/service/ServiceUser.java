@@ -1,6 +1,6 @@
 package service;
 
-import Project.DBconnection;
+//import Project.DBconnection;
 import Project.DatabaseConnection;
 import model.ModelUser;
 import java.sql.Connection;
@@ -11,26 +11,29 @@ import java.text.DecimalFormat;
 import java.util.Random;
 
 public class ServiceUser {
+    
 
-    private Connection con;
+    private final Connection con;
 
     public ServiceUser() {
         con = DatabaseConnection.getInstance().getConnection();
     }
 
     public void insertUser(ModelUser user) throws SQLException {
-        PreparedStatement p = con.prepareStatement("insert into `user`(userName, email, `password`, verifyCode) values (?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
-        String code = generateVerifyCode();
-        p.setString(1, user.getUserName());
-        p.setString(2, user.getEmail());
-        p.setString(3, user.getPassword());
-        p.setString(4, code);
-        p.executeUpdate();
-        ResultSet r = p.getGeneratedKeys();
-        r.first();
-        int userID = r.getInt(1);
-        r.close();
-        p.close();
+        String code;
+        int userID;
+        try (PreparedStatement p = con.prepareStatement("insert into `user`(userName, email, `password`, verifyCode) values (?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS)) {
+            code = generateVerifyCode();
+            p.setString(1, user.getUserName());
+            p.setString(2, user.getEmail());
+            p.setString(3, user.getPassword());
+            p.setString(4, code);
+            p.executeUpdate();
+            ResultSet r = p.getGeneratedKeys();
+            r.first();
+            userID = r.getInt(1);
+            r.close();
+        }
         user.setUserID(userID);
         user.setVerifyCode(code);
     }

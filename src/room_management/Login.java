@@ -1,13 +1,11 @@
 package room_management;
 
-import Project.DBconnection;
 import Project.DatabaseConnection;
 import component.Message;
 import component.PanelCover;
 import component.PanelLoading;
 import component.PanelLoginAndRegister;
 import component.PanelVerifyCode;
-//import Project.DatabaseConnection;
 import model.ModelMessage;
 import model.ModelUser;
 import service.ServiceMail;
@@ -24,8 +22,8 @@ import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
 
-public class Main extends javax.swing.JFrame {
-
+public class Login extends javax.swing.JFrame {
+    
     private final DecimalFormat df = new DecimalFormat("##0.###", DecimalFormatSymbols.getInstance(Locale.US));
     private MigLayout layout;
     private PanelCover cover;
@@ -38,7 +36,7 @@ public class Main extends javax.swing.JFrame {
     private final double loginSize = 60;
     private ServiceUser service;
 
-    public Main() {
+    public Login() {
         initComponents();
         init();
     }
@@ -49,11 +47,8 @@ public class Main extends javax.swing.JFrame {
         cover = new PanelCover();
         loading = new PanelLoading();
         verifyCode = new PanelVerifyCode();
-        ActionListener eventRegister = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                register();
-            }
+        ActionListener eventRegister = (ActionEvent ae) -> {
+            register();
         };
         loginAndRegister = new PanelLoginAndRegister(eventRegister);
         TimingTarget target = new TimingTargetAdapter() {
@@ -152,7 +147,7 @@ public class Main extends javax.swing.JFrame {
             showMessage(Message.MessageType.ERROR, "Error Register");
         }
     }
-
+    
     private void sendMain(ModelUser user) {
         new Thread(new Runnable() {
             @Override
@@ -169,8 +164,8 @@ public class Main extends javax.swing.JFrame {
             }
         }).start();
     }
-
-     private void showMessage(Message.MessageType messageType, String message) {
+    
+    private void showMessage(Message.MessageType messageType, String message) {
         Message ms = new Message();
         ms.showMessage(messageType, message);
         TimingTarget target = new TimingTargetAdapter() {
@@ -224,7 +219,7 @@ public class Main extends javax.swing.JFrame {
             }
         }).start();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -232,10 +227,6 @@ public class Main extends javax.swing.JFrame {
         bg = new javax.swing.JLayeredPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-
-        bg.setBackground(new java.awt.Color(255, 255, 255));
-        bg.setOpaque(true);
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
@@ -260,10 +251,11 @@ public class Main extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    
     public static void main(String args[]) {
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -272,13 +264,13 @@ public class Main extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         /* Create and display the form */
@@ -288,19 +280,15 @@ public class Main extends javax.swing.JFrame {
         catch(Exception e){
             e.printStackTrace();
         }
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+                new Login().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane bg;
-        
-    }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLayeredPane bg;
     // End of variables declaration//GEN-END:variables
-
+}

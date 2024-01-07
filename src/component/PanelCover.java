@@ -70,7 +70,7 @@ public class PanelCover extends javax.swing.JPanel {
 
     protected void paintComponent(Graphics grphcs){
         Graphics2D g2=(Graphics2D)grphcs;
-        GradientPaint gra=new GradientPaint(0,0,new Color(35, 166, 197),0,getHeight(),new Color(22, 116, 66));
+        GradientPaint gra=new GradientPaint(0,0,new Color(54, 33, 89),0,getHeight(),new Color(153, 0, 153));
         g2.setPaint(gra);
         g2.fillRect(0, 0, getWidth(), getHeight());
         super.paintComponent(grphcs);
