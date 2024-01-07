@@ -13,19 +13,28 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
+import model.ModelLogin;
 
 public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
+
+    /**
+     * @return the dataLogin
+     */
+    public ModelLogin getDataLogin() {
+        return dataLogin;
+    }
 
     public ModelUser getUser() {
         return user;
     }
 
     private ModelUser user;
+    private ModelLogin dataLogin;
 
-    public PanelLoginAndRegister(ActionListener eventRegister) {
+    public PanelLoginAndRegister(ActionListener eventRegister,ActionListener eventLogin) {
         initComponents();
         initRegister(eventRegister);
-        initLogin();
+        initLogin(eventLogin);
         login.setVisible(false);
         register.setVisible(true);
     }
@@ -65,7 +74,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         });
     }
 
-    private void initLogin() {
+    private void initLogin(ActionListener eventLogin) {
         login.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]25[]push"));
         JLabel label = new JLabel("Sign In");
         label.setFont(new Font("sansserif", 1, 30));
@@ -90,6 +99,15 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         cmd.setForeground(new Color(250, 250, 250));
         cmd.setText("SIGN IN");
         login.add(cmd, "w 40%, h 40");
+        cmd.addActionListener(eventLogin);
+        cmd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                String email = txtEmail.getText().trim();
+                String password = String.valueOf(txtPass.getPassword());
+                dataLogin = new ModelLogin(email, password);
+            }
+        });
     }
 
     public void showRegister(boolean show) {

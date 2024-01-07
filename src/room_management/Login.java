@@ -1,6 +1,7 @@
 package room_management;
 
-import Project.DatabaseConnection;
+//import Project.DatabaseConnection;
+import Project.DBconnection;
 import component.Message;
 import component.PanelCover;
 import component.PanelLoading;
@@ -17,10 +18,13 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
+import model.ModelLogin;
+//import java.sql.Connection;
 
 public class Login extends javax.swing.JFrame {
     
@@ -50,7 +54,12 @@ public class Login extends javax.swing.JFrame {
         ActionListener eventRegister = (ActionEvent ae) -> {
             register();
         };
-        loginAndRegister = new PanelLoginAndRegister(eventRegister);
+        ActionListener eventLogin=new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                login();
+            }
+        };
+        loginAndRegister = new PanelLoginAndRegister(eventRegister,eventLogin);
         TimingTarget target = new TimingTargetAdapter() {
             @Override
             public void timingEvent(float fraction) {
@@ -148,6 +157,21 @@ public class Login extends javax.swing.JFrame {
         }
     }
     
+    private void login() {
+        ModelLogin data = loginAndRegister.getDataLogin();
+        try {
+            ModelUser user = service.login(data);
+            if (user != null) {
+                this.dispose();
+                new Home().setVisible(true);
+            } else {
+                showMessage(Message.MessageType.ERROR, "Email and Password incorrect");
+            }
+
+        } catch (SQLException e) {
+            showMessage(Message.MessageType.ERROR, "Error Login");
+        }
+    }
     private void sendMain(ModelUser user) {
         new Thread(new Runnable() {
             @Override
@@ -251,6 +275,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     
@@ -275,7 +300,8 @@ public class Login extends javax.swing.JFrame {
         //</editor-fold>
         /* Create and display the form */
         try{
-            DatabaseConnection.getInstance().connectToDatabase();
+            //DatabaseConnection.getInstance().connectToDatabase();
+            DBconnection.getCon();
         }
         catch(Exception e){
             e.printStackTrace();

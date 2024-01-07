@@ -9,19 +9,20 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.swing.JOptionPane;
 
 public class ServiceMail {
 
     public ModelMessage sendMain(String toEmail, String code) {
         ModelMessage ms = new ModelMessage(false, "");
-        String from = "******@gmail.com";
+        String from = "khadija.laamiri19@gmail.com";
         Properties prop = new Properties();
         prop.put("mail.smtp.host", "smtp.gmail.com");
         prop.put("mail.smtp.port", "587");
         prop.put("mail.smtp.auth", "true");
         prop.put("mail.smtp.starttls.enable", "true");
-        String username = "******@gmail.com";
-        String password = "******";    //  Your email password here
+        String username = "khadija.laamiri19@gmail.com";
+        String password = "jtvswfxtbrppqdac";    //  Your email password here
         Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
@@ -40,6 +41,7 @@ public class ServiceMail {
             if (e.getMessage().equals("Invalid Addresses")) {
                 ms.setMessage("Invalid email");
             } else {
+                JOptionPane.showConfirmDialog(null,e);
                 ms.setMessage("Error");
             }
         }
