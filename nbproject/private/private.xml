@@ -6,7 +6,11 @@
             <file>file:/D:/room_management/src/room_management/AddStudent.java</file>
             <file>file:/D:/room_management/src/service/ServiceUser.java</file>
             <file>file:/D:/room_management/src/service/ServiceMail.java</file>
+            <file>file:/D:/room_management/src/component/PanelLoginAndRegister.java</file>
+            <file>file:/D:/room_management/src/room_management/DeleteUpdateStudent.java</file>
             <file>file:/D:/room_management/src/room_management/Home.java</file>
+            <file>file:/D:/room_management/src/model/ModelLogin.java</file>
+            <file>file:/D:/room_management/src/room_management/RoomManagement.java</file>
             <file>file:/D:/room_management/src/room_management/Login.java</file>
         </group>
     </open-files>
